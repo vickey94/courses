@@ -1,21 +1,22 @@
-import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        //DP dp= new DP();
-       // dp.dp();
 
-        BT bt = new BT();
-        bt.backTrack(0);
+        //动态规划
+      //  DP dp= new DP();
+      //  dp.dp();
 
-       /* BBM bbm = new BBM();
+        //回溯法
+       // BT bt = new BT();
+       // bt.backTrack(0);
+
+        //分支限界法
+        BBM bbm = new BBM();
         bbm.getMaxValue();
         System.out.println("该背包能够取到的最大价值为:"+bbm.maxValue);
         for(int i : bbm.bestWay)
             System.out.print(i+"\t");
-*/
-
 
 
     }

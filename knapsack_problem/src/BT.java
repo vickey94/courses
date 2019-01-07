@@ -10,15 +10,11 @@ public class BT {
     private float[] w = {3,5,2,1}; //物品i重量为w_i
     private float[] p = {9,10,7,4}; //物品i的价值为p_i
 
-
     private int cw = 0; //当前已拿重量
     private float cp = 0; //当前已拿价格
     private float bestp = 0 ; //当前最优价值
 
-    public void backtrack(){
-
-
-    }
+    public void backtrack(){ }
 
     public BT(){
         //对价值按照从大到小排序
@@ -39,7 +35,6 @@ public class BT {
         for(int i = 0; i < n; i++){
             System.out.print(p[i]/ w[i]+"\t");
         }
-
     }
 
     public void backTrack(int t){
@@ -47,9 +42,7 @@ public class BT {
         if(t >  n -1){
             if(cp > bestp)
                 bestp = cp ;
-
             System.out.println(bestp);
-
             return;
         }
 
@@ -77,12 +70,10 @@ public class BT {
             maxLeft += p[k];
             k++;
         }
-
         //不能装时，用下一个物品的单位重量价值折算到剩余空间。
         if(k <= n -1 ){
             maxLeft += p[k] / w[k] * LeftW ;
         }
-
         return  maxLeft;
     }
 

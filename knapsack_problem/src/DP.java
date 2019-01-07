@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2018.12
+ * author: Kailun Yan(Vickey)
+ * e-mail: vk@vickey.me
+ */
+
 //dynamic programming
 public class DP {
     private final static int n = 4 ; //n种物品
@@ -5,12 +11,9 @@ public class DP {
     private final static int[] w = {3,5,2,1}; //物品i重量为w_i
     private final static int[] p = {9,10,7,4}; //物品i的价值为p_i
 
-
-
     public void  dp(){
 
         int[][] maxValue = new int[n +1][c +1];
-
 
         for(int i = 1; i <= n; i++){
             for(int j = 1; j <= c; j++){

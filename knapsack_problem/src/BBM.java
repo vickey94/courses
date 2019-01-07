@@ -6,7 +6,6 @@
 
 
 //Branch and Bound Method
-
 import java.util.PriorityQueue;
 
 class thingNode implements Comparable<thingNode> {
@@ -39,6 +38,21 @@ public class BBM {
     int[] bestWay = new int[n];
 
     public void getMaxValue() {
+        //对价值按照从大到小排序
+       for(int i = 0; i < n -1; i++){
+            for(int j = 0; j < n -i-1; j++){
+                if(p[j]/ w[j]< p[j+1]/ w[j+1]){
+                    int tw = w[j];
+                    w[j] = w[j+1];
+                    w[j+1] = tw;
+
+                    float tp = p[j];
+                    p[j] = p[j+1];
+                    p[j+1] = tp;
+                }
+            }
+        }
+
         PriorityQueue<thingNode> pq = new PriorityQueue<thingNode>();
 
         //构造一个初始化节点属于-1层
